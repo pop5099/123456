@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ShowPicViewController">
+            <connections>
+                <outlet property="commentButton" destination="1NG-xx-8ad" id="Iry-eW-mkT"/>
+                <outlet property="progsView" destination="5KJ-JW-Gzg" id="Qgw-mx-Zng"/>
+                <outlet property="scrollView" destination="e8r-MM-n4v" id="RoT-ci-UsI"/>
+                <outlet property="transpondButton" destination="UzH-QT-gE4" id="gtX-35-Z4I"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8r-MM-n4v" userLabel="滑动试图">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </scrollView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXG-8v-Z49" userLabel="保存">
+                    <rect key="frame" x="20" y="627" width="74" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="Mbt-8d-Lh0"/>
+                    </constraints>
+                    <state key="normal" title="保存" backgroundImage="play-voice-bg-select"/>
+                    <connections>
+                        <action selector="saveButtonAction:" destination="-1" eventType="touchUpInside" id="yfA-H5-5H6"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KJ-JW-Gzg" customClass="DALabeledCircularProgressView">
+                    <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="3uU-Ww-Xd7"/>
+                        <constraint firstAttribute="width" constant="100" id="Ohq-um-rKw"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1NG-xx-8ad" userLabel="评论">
+                    <rect key="frame" x="280" y="627" width="75" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="75" id="I0u-dp-SMs"/>
+                        <constraint firstAttribute="height" constant="30" id="gef-oE-fDl"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="" image="mainCellComment" backgroundImage="play-voice-bg-select">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" image="mainCellComment"/>
+                    <connections>
+                        <action selector="commentAction:" destination="-1" eventType="touchUpInside" id="0dS-mO-KS0"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3n-PY-PUS" userLabel="后退">
+                    <rect key="frame" x="20" y="30" width="35" height="35"/>
+                    <state key="normal" image="show_image_back_icon"/>
+                    <connections>
+                        <action selector="exitAction:" destination="-1" eventType="touchUpInside" id="7yr-rh-PIV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UzH-QT-gE4" userLabel="转发">
+                    <rect key="frame" x="195" y="627" width="75" height="30"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="HVe-ls-zuI"/>
+                        <constraint firstAttribute="width" constant="75" id="cyP-H5-DGR"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="titleEdgeInsets" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="mainCellShare" backgroundImage="play-voice-bg-select">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <state key="highlighted" image="mainCellShare"/>
+                    <connections>
+                        <action selector="transpondAction:" destination="-1" eventType="touchUpInside" id="qUh-8Y-ASS"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="UzH-QT-gE4" secondAttribute="bottom" constant="10" id="FXJ-68-ZoX"/>
+                <constraint firstAttribute="trailing" secondItem="e8r-MM-n4v" secondAttribute="trailing" id="OXo-Np-iDr"/>
+                <constraint firstAttribute="bottom" secondItem="e8r-MM-n4v" secondAttribute="bottom" id="WT3-kY-L6X"/>
+                <constraint firstItem="e8r-MM-n4v" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YUN-gf-XJK"/>
+                <constraint firstItem="p3n-PY-PUS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Yf3-Mx-4bt"/>
+                <constraint firstItem="e8r-MM-n4v" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="fNx-eX-DCD"/>
+                <constraint firstAttribute="bottom" secondItem="1NG-xx-8ad" secondAttribute="bottom" constant="10" id="qcJ-a3-8YX"/>
+                <constraint firstItem="1NG-xx-8ad" firstAttribute="leading" secondItem="UzH-QT-gE4" secondAttribute="trailing" constant="10" id="rHa-yG-aqt"/>
+                <constraint firstItem="5KJ-JW-Gzg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="sDD-vc-Q0k"/>
+                <constraint firstItem="5KJ-JW-Gzg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="t1S-46-tDP"/>
+                <constraint firstAttribute="trailing" secondItem="1NG-xx-8ad" secondAttribute="trailing" constant="20" id="u9B-l0-Tld"/>
+                <constraint firstItem="XXG-8v-Z49" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="xd5-ql-pCh"/>
+                <constraint firstItem="p3n-PY-PUS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="yUM-fO-ual"/>
+                <constraint firstAttribute="bottom" secondItem="XXG-8v-Z49" secondAttribute="bottom" constant="10" id="zcY-Ul-fCO"/>
+            </constraints>
+            <point key="canvasLocation" x="440" y="199"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="mainCellComment" width="20" height="20"/>
+        <image name="mainCellShare" width="20" height="20"/>
+        <image name="play-voice-bg-select" width="74" height="24"/>
+        <image name="show_image_back_icon" width="35" height="35"/>
+    </resources>
+</document>

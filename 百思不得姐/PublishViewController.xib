@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11535.1" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublishViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareBottomBackground" translatesAutoresizingMaskIntoConstraints="NO" id="jBF-oQ-9vb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqj-AK-UXH">
+                    <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="TTO-uG-zz4"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="shareButtonCancel"/>
+                    <state key="selected" backgroundImage="shareButtonCancelClick"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="psS-nC-i79"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wqj-AK-UXH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3rg-2g-EqO"/>
+                <constraint firstAttribute="bottom" secondItem="wqj-AK-UXH" secondAttribute="bottom" id="Gun-85-tcY"/>
+                <constraint firstItem="jBF-oQ-9vb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="kYT-zx-7cs"/>
+                <constraint firstAttribute="trailing" secondItem="wqj-AK-UXH" secondAttribute="trailing" id="lvI-ge-V3O"/>
+                <constraint firstAttribute="bottom" secondItem="jBF-oQ-9vb" secondAttribute="bottom" id="oRA-oH-Wet"/>
+                <constraint firstAttribute="trailing" secondItem="jBF-oQ-9vb" secondAttribute="trailing" id="tat-8j-1GU"/>
+                <constraint firstItem="jBF-oQ-9vb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xXo-t7-yD9"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="shareBottomBackground" width="320" height="343"/>
+        <image name="shareButtonCancel" width="289" height="40"/>
+        <image name="shareButtonCancelClick" width="289" height="40"/>
+    </resources>
+</document>
